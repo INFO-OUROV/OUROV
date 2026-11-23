@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"OUROV","url":"https://ourov.in/","description":"Independent creative and digital agency based in Mumbai, India, offering branding, graphic design, social media creative, UI/UX and website development.","email":"info.ourov@gmail.com","telephone":"+917738433653","founder":{"@type":"Person","name":"Yash Agrawal"},"address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressRegion":"Maharashtra","addressCountry":"IN"},"areaServed":[{"@type":"Country","name":"India"},{"@type":"Place","name":"Worldwide"}],"sameAs":["https://www.instagram.com/ourov.in","https://www.linkedin.com/company/ourov.in/"],"knowsAbout":["Brand strategy","Brand identity design","Graphic design","Social media design","Digital marketing creatives","UI/UX design","Website development","App development"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"OUROV","url":"https://ourov.in/","description":"Independent creative and digital agency based in Mumbai, India, offering branding, graphic design, social media creative, UI/UX and website development.","email":"hello@ourov.in","telephone":"+917738433653","founder":{"@type":"Person","name":"Yash Agrawal"},"address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressRegion":"Maharashtra","addressCountry":"IN"},"areaServed":[{"@type":"Country","name":"India"},{"@type":"Place","name":"Worldwide"}],"sameAs":["https://www.instagram.com/ourov.in","https://www.linkedin.com/company/ourov.in/"],"knowsAbout":["Brand strategy","Brand identity design","Graphic design","Social media design","Digital marketing creatives","UI/UX design","Website development","App development"]}
 </script>
 <style>
 :root{--paper:#f4f3ef;--ink:#171816;--muted:#6e7069;--line:#d8d8d0;--acid:#d7f36b;--white:#fff;--max:1280px;--pad:clamp(20px,5vw,76px);--ease:cubic-bezier(.2,.7,.2,1)}
@@ -97,7 +97,7 @@ footer{background:#191a18;color:#f4f3ef;padding:64px 0 26px}.footer-top{display:
 <details><summary>Can I engage you for just one service?</summary><p>Absolutely. You can engage OUROV for a focused requirement or for a connected set of brand, creative and digital services.</p></details>
 <details><summary>How do we get started?</summary><p>Share a little about your business, requirement, timeline and goals through the enquiry form or contact us directly. We'll take it from there.</p></details>
 </div></div></section>
-<section class="section contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">Have something in mind?</div><h2>Let's make<br>it matter.</h2><p class="contact-lead">Tell us where you want to go. We'll start with a conversation, understand what you need and work out the right next step.</p><div class="contact-links"><a href="mailto:info.ourov@gmail.com">info.ourov@gmail.com ↗</a><a href="https://wa.me/917738433653" target="_blank" rel="noopener">WhatsApp / +91 77384 33653 ↗</a></div></div>
+<section class="section contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">Have something in mind?</div><h2>Let's make<br>it matter.</h2><p class="contact-lead">Tell us where you want to go. We'll start with a conversation, understand what you need and work out the right next step.</p><div class="contact-links"><a href="mailto:hello@ourov.in">hello@ourov.in ↗</a><a href="https://wa.me/917738433653" target="_blank" rel="noopener">WhatsApp / +91 77384 33653 ↗</a></div></div>
 <form class="contact-form" id="enquiryForm"><h3>Tell us about your project.</h3><label class="field"><span>Your name</span><input name="name" autocomplete="name" placeholder="Name" required></label><label class="field"><span>Work email</span><input name="email" type="email" autocomplete="email" placeholder="you@company.com" required></label><label class="field"><span>What do you need?</span><select name="service"><option>Brand strategy & identity</option><option>Graphic design & social media</option><option>UI/UX & digital experience</option><option>Website or app development</option><option>Multiple services / Not sure yet</option></select></label><label class="field"><span>Tell us a little more</span><textarea name="message" placeholder="A short note about your business, goals and timeline..."></textarea></label><input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:1px;width:1px">
 <button class="button dark" type="submit">Send project enquiry ↗</button><p class="form-note" id="formStatus" role="status" aria-live="polite">Your details are used only to respond to your enquiry.</p></form>
 </div></section>
@@ -164,14 +164,14 @@ $('#enquiryForm').addEventListener('submit',async e=>{
    _url:'https://ourov.in/',_replyto:f.get('email'),
    Name:f.get('name'),Email:f.get('email'),Requirement:f.get('service'),Message:f.get('message')||'-'};
  try{
-   const response=await fetch('https://formsubmit.co/ajax/info.ourov@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
+   const response=await fetch('https://formsubmit.co/ajax/hello@ourov.in',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
    let result={};
    try{result=await response.json();}catch(parseError){throw new Error('The form service returned an unreadable response.');}
    const accepted=result.success===true||result.success==='true';
    if(!response.ok||!accepted) throw new Error(result.message||'The form service did not accept this enquiry.');
    form.reset();status.textContent='Thank you — your enquiry has been sent. We’ll get back to you soon.';
  }catch(err){
-   status.textContent=(err&&err.message?err.message:'We couldn’t send this right now.')+' Please email info.ourov@gmail.com or message us on WhatsApp.';
+   status.textContent=(err&&err.message?err.message:'We couldn’t send this right now.')+' Please email hello@ourov.in or message us on WhatsApp.';
  }
  finally{btn.disabled=false;}
 });
