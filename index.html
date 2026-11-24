@@ -32,7 +32,7 @@ header{position:sticky;top:0;z-index:40;background:rgba(244,243,239,.9);backdrop
 .intro-grid{display:grid;grid-template-columns:.55fr 1.45fr;gap:5vw}.intro-grid h2{font-size:clamp(35px,5vw,66px);line-height:1;letter-spacing:-.075em;font-weight:500;margin:0;max-width:900px}.intro-grid h2 span{color:#92948a}.intro-side{padding-top:8px}.intro-side p{color:var(--muted);max-width:380px;font-size:14px}.text-link{display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:700;border-bottom:1px solid #aeb0a6;padding:0 0 8px;margin-top:12px}
 .work-section{background:#191a18;color:#f4f3ef}.work-section .eyebrow,.work-section .section-head p,.work-section .project-meta p,.work-section .work-foot{color:#a7a99f}.work-section .project-meta{border-color:#454741}.work-section .project-media{background:#e8e7e1}.work-section .text-link{border-color:#686b63;color:#f4f3ef}.work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 20px}.project{display:block;text-align:left;border:0;padding:0;background:transparent;cursor:pointer;min-width:0}.project:nth-child(2){margin-top:90px}.project:nth-child(3){margin-top:-42px}.project-media{position:relative;aspect-ratio:1.28;background:#f4f3ef;overflow:hidden;border:1px solid rgba(255,255,255,.10)}
 .project-logo-stage{display:flex;align-items:center;justify-content:center;padding:clamp(26px,5vw,64px)}
-.project-logo-stage.vastra{background:#f7f8f6}
+.project-logo-stage.sylqen{background:#e5e7d9}\n.project-logo-stage.vastra{background:#f7f8f6}
 .project-logo-stage.zivora{background:linear-gradient(145deg,#eee8df 0%,#e4d8c8 100%)}
 .project-logo-stage.citimart{background:#f0f1e9}
 .project-media.project-logo-stage img{display:block;width:auto;height:auto;max-width:78%;max-height:62%;object-fit:contain;transition:transform .5s var(--ease);filter:none}
@@ -105,8 +105,14 @@ footer{background:#191a18;color:#f4f3ef;padding:64px 0 26px}.footer-top{display:
 <footer><div class="wrap"><div class="footer-top"><div><div class="footer-logo" role="img" aria-label="OUROV"></div><p>Independent creative & digital agency. Mumbai, India — working across India and worldwide.</p></div><div class="footer-links"><a href="#work">Work</a><a href="#services">Services</a><a href="#approach">Approach</a><a href="#about">About</a><a href="https://www.instagram.com/ourov.in" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.linkedin.com/company/ourov.in/" target="_blank" rel="noopener">LinkedIn ↗</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> OUROV. All rights reserved.</span><span>Creative agency in Mumbai, Maharashtra, India</span><a href="#top">Back to top ↑</a></div></div></footer>
 <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-panel"><button class="modal-close" id="modalClose">Close ×</button><div class="eyebrow" id="modalCat"></div><h2 id="modalTitle"></h2><p id="modalDesc"></p><div class="modal-images" id="modalImages"></div><div class="modal-actions"><a class="button dark" href="#contact" id="modalCta">Discuss a similar project ↗</a></div></div></div>
 <script>
-const IMG = {"vk_cover":"assets/vk_cover.webp","vk_truck":"assets/vk_truck.webp","vk_made":"assets/vk_made.webp","vk_free":"assets/vk_free.webp","vk_dry":"assets/vk_dry.webp","vk_app":"assets/vk_app.webp","vk_logo":"assets/vk_logo.webp","zv_store":"assets/zv_store.webp","zv_ear":"assets/zv_ear.webp","zv_ring":"assets/zv_ring.webp","zv_neck":"assets/zv_neck.webp","zv_brace":"assets/zv_brace.webp","cm_double":"assets/cm_double.webp","cm_pringles":"assets/cm_pringles.webp","cm_oats":"assets/cm_oats.webp","cm_aata":"assets/cm_aata.webp","cm_logo":"assets/cm_logo.webp"};
+const IMG = {"sy_overview":"assets/sy_label-overview.webp","sy_box":"assets/sy_packaging-box.webp","sy_envelope":"assets/sy_envelope-card.webp","sy_tape":"assets/sy_brand-tape.webp","sy_monogram":"assets/sy_monogram-detail.webp","sy_garment":"assets/sy_garment-label.webp","sy_detail":"assets/sy_label-detail.webp","sy_wordmark":"assets/sy_wordmark-label.webp","vk_cover":"assets/vk_cover.webp","vk_truck":"assets/vk_truck.webp","vk_made":"assets/vk_made.webp","vk_free":"assets/vk_free.webp","vk_dry":"assets/vk_dry.webp","vk_app":"assets/vk_app.webp","vk_logo":"assets/vk_logo.webp","zv_store":"assets/zv_store.webp","zv_ear":"assets/zv_ear.webp","zv_ring":"assets/zv_ring.webp","zv_neck":"assets/zv_neck.webp","zv_brace":"assets/zv_brace.webp","cm_double":"assets/cm_double.webp","cm_pringles":"assets/cm_pringles.webp","cm_oats":"assets/cm_oats.webp","cm_aata":"assets/cm_aata.webp","cm_logo":"assets/cm_logo.webp"};
 const PROJECTS = [
+  { title:'SYLQEN', cls:'wide', cover:'sy_overview', coverImage:true, cat:'Fashion & apparel',
+    tags:'Brand identity, Packaging, Labels, Brand collateral',
+    desc:'A refined identity system for SYLQEN, expressed through an interwoven monogram, elegant serif typography and a restrained palette of warm ivory and sage green. The identity extends across garment labels, packaging, stationery and branded details.',
+    delivered:['Monogram and wordmark','Garment labels and trims','Packaging and stationery','Branded tape and collateral'],
+    links:[],
+    gallery:[['sy_overview','SYLQEN stitched label identity on ivory fabric'],['sy_box','SYLQEN premium packaging box and tissue paper'],['sy_envelope','SYLQEN envelope and brand card'],['sy_tape','SYLQEN branded paper tape'],['sy_monogram','SYLQEN interwoven monogram detail'],['sy_garment','SYLQEN garment label on sage knitwear'],['sy_detail','SYLQEN stitched label close-up'],['sy_wordmark','SYLQEN monogram and wordmark on woven label']] },
   { title:'Vastra Klinzo', cls:'wide', cover:'vk_cover', logo:'vk_logo', cat:'Laundry & dry cleaning',
     tags:'Brand identity, Social, App promo, Vehicle branding',
     desc:'A complete identity for a laundry and dry-cleaning service: the logo, social campaigns, app promotion and fleet branding that make it easy to spot and easy to trust.',
@@ -119,25 +125,27 @@ const PROJECTS = [
     delivered:['Logo and monogram','Product ad creatives','Storefront concept'],
     links:[],
     gallery:[['zv_store','Zivora jewellery storefront at night with illuminated signage'],['zv_ear','Zivora halo diamond earrings ad'],['zv_ring','Zivora solitaire ring ad'],['zv_neck','Zivora star pendant necklace ad'],['zv_brace','Zivora bracelet ad']] },
-  { title:'Citimart', cls:'sq', cover:'cm_double', logo:'cm_logo', cat:'Supermart & retail',
+  { title:'Citi Mart', cls:'sq', cover:'cm_double', logo:'cm_logo', cat:'Supermart & retail',
     tags:'Social creatives, Offer campaigns',
     desc:'Price-first social creatives for a neighbourhood supermart. Bold colour, clear offers and products you can read in half a second of scrolling.',
     delivered:['Social media creatives','Offer and deal campaigns'],
     links:[],
-    gallery:[['cm_logo','Citimart logo'],['cm_double','Citimart buy one get one free chocolates post'],['cm_pringles','Citimart Pringles lowest price post'],['cm_oats','Citimart protein oats offer post'],['cm_aata','Citimart Aashirvaad atta offer post']] }
+    gallery:[['cm_logo','Citi Mart logo'],['cm_double','Citi Mart buy one get one free chocolates post'],['cm_pringles','Citi Mart Pringles lowest price post'],['cm_oats','Citi Mart protein oats offer post'],['cm_aata','Citi Mart Aashirvaad atta offer post']] }
 ];
 const $ = (s,root=document)=>root.querySelector(s);
 const $$ = (s,root=document)=>[...root.querySelectorAll(s)];
 const keys = Object.keys(IMG);
-const firstVisual = IMG['vk_logo'] || IMG['vk_cover'] || IMG[keys.find(k=>k.includes('cover'))] || '';
+const firstVisual = IMG['sy_overview'] || IMG['vk_logo'] || IMG['vk_cover'] || IMG[keys.find(k=>k.includes('cover'))] || '';
 $('#heroVisual').src = firstVisual;
 const workGrid = $('#workGrid');
 PROJECTS.forEach((p,i)=>{
  const card=document.createElement('button');card.className='project';card.type='button';card.setAttribute('aria-label','View '+p.title+' case study');
  const cover=IMG[p.cover]||'';
- const brandClass=i===0?'vastra':i===1?'zivora':'citimart';
- const logoMarkup=p.logo&&IMG[p.logo]?`<img src="${IMG[p.logo]}" alt="${p.title} logo" loading="lazy" decoding="async">`:`<span class="project-wordmark">${p.logoText||p.title.toUpperCase()}</span>`;
- card.innerHTML=`<div class="project-media project-logo-stage ${brandClass}"><span class="project-logo-index">OUROV / 0${i+1}</span>${logoMarkup}<span class="project-view">VIEW PROJECT ↗</span></div><div class="project-meta"><div><h3>${p.title}</h3><p>${p.tags}</p></div><span class="project-arrow">↗</span></div>`;
+ const brandClass=i===0?'sylqen':i===1?'vastra':i===2?'zivora':'citimart';
+ const mediaMarkup=p.coverImage
+   ? `<div class="project-media"><img src="${cover}" alt="${p.title} brand identity overview" loading="lazy" decoding="async"><span class="project-logo-index">OUROV / 0${i+1}</span><span class="project-view">VIEW PROJECT ↗</span></div>`
+   : `<div class="project-media project-logo-stage ${brandClass}"><span class="project-logo-index">OUROV / 0${i+1}</span>${p.logo&&IMG[p.logo]?`<img src="${IMG[p.logo]}" alt="${p.title} logo" loading="lazy" decoding="async">`:`<span class="project-wordmark">${p.logoText||p.title.toUpperCase()}</span>`}<span class="project-view">VIEW PROJECT ↗</span></div>`;
+ card.innerHTML=`${mediaMarkup}<div class="project-meta"><div><h3>${p.title}</h3><p>${p.tags}</p></div><span class="project-arrow">↗</span></div>`;
  card.addEventListener('click',()=>openProject(i));workGrid.appendChild(card);
 });
 function openProject(i){
